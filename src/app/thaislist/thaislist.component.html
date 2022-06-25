@@ -1,0 +1,27 @@
+<h2>List</h2>
+
+<h3>Dados da Corretora</h3>
+<div *ngIf="x">
+<table> 
+  <thead> 
+<tr>
+  <th>Ano de Fechamento</th>  
+  <th>Data de Fechamento</th>  
+  <th>Data de transação</th>  
+  <th>Montante</th>  
+  <th>Representante</th>  
+</tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let dado of x | async">
+      <td>{{dado.disclosure_year}}</td>  
+      <td>{{dado.disclosure_date}}</td>  
+      <td>{{dado.transaction_date }}</td>  
+      <td>{{dado.amount}}</td>  
+      <td>{{dado.representative}}</td> 
+    </tr>   
+  </tbody>
+
+</table>
+</div>
